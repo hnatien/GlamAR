@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GlamAR - Fashion Store</title>
+  <link rel="icon" href="images/logo.jpg" sizes="192x192" />
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+  <header>
+    <div class="top-bar">
+      <div class="container">
+        <!-- Logo bên trái -->
+        <div class="logo">
+          <a href="#">GlamAR</a>
+        </div>
+  
+        <!-- Thanh tìm kiếm ở giữa -->
+        <div class="search-bar">
+          <input type="text" placeholder="Search for products...">
+          <button><i class="fas fa-search"></i></button>
+        </div>
+  
+        <!-- Các icon bên phải -->
+        <div class="right-icons">
+          <a href="#"><i class="far fa-heart"></i></a>
+          <a href="#"><i class="far fa-user"></i></a>
+          <a href="#">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count">0</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Navigation Bar -->
+    <nav class="nav-bar">
+      <div class="container">
+        <a href="#">New In</a>
+        <a href="#">Curve</a>
+        <a href="#">Premium</a>
+        <div class="dropdown">
+          <a href="#">Women <i class="fas fa-chevron-down"></i></a>
+          <div class="dropdown-content">
+            <a href="#">Dresses</a>
+            <a href="#">Tops</a>
+            <a href="#">Bottoms</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="#">Men <i class="fas fa-chevron-down"></i></a>
+          <div class="dropdown-content">
+            <a href="#">Shirts</a>
+            <a href="#">Pants</a>
+            <a href="#">Accessories</a>
+          </div>
+        </div>
+        <a href="#">Kids</a>
+        <a href="#">Sale</a>
+      </div>
+    </nav>
+  </header>
+
+
+<section class="swiper-top-sales-section">
+  <div class="swiper-top-sales-container">
+    <div class="container">
+      <!-- Left Sales Section -->
+      <div class="sales-section left-sales">
+        <div class="sales-banner">
+          <img src="images/sales-left.jpg" alt="Left Sales Banner">
+        </div>
+        <div class="sales-info">
+          <h3>10% OFF</h3>
+          <p>OVER 50K</p>
+          <a href="#" class="shop-now">Shop Now</a>
+        </div>
+      </div>
+
+      <!-- Swiper Section -->
+      <div class="swiper-section">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+              <img src="images/uniqlo1.jpg" alt="Swiper Image 1">
+            </div>
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+              <img src="images/uniqlo2.jpg" alt="Swiper Image 2">
+            </div>
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+              <img src="images/uniqlo3.jpg" alt="Swiper Image 3">
+            </div>
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+          <!-- Add Navigation Buttons -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+
+      <!-- Top Sales Section -->
+      <div class="top-sales-section">
+        <h3>
+          <i class="fas fa-fire" style="color: #ff6b6b; margin-right: 0.5rem;"></i>
+          Top Sales</h3>
+        <div class="top-sales-grid">
+          <!-- Product 1 -->
+          <div class="top-sales-item">
+            <div class="product-image">
+              <img src="images/uniqlo3.jpg" alt="Top Sales Product 1">
+              <div class="product-price">349.000₫</div>
+            </div>
+          </div>
+          <!-- Product 2 -->
+          <div class="top-sales-item">
+            <div class="product-image">
+              <img src="images/uniqlo4.jpg" alt="Top Sales Product 2">
+              <div class="product-price">750.000₫</div>
+            </div>
+          </div>
+          <!-- Product 3 -->
+          <div class="top-sales-item">
+            <div class="product-image">
+              <img src="images/top-sales3.jpg" alt="Top Sales Product 3">
+              <div class="product-price">1.580.000₫</div>
+            </div>
+          </div>
+          <!-- Product 4 -->
+          <div class="top-sales-item">
+            <div class="product-image">
+              <img src="images/top-sales4.jpg" alt="Top Sales Product 4">
+              <div class="product-price">630.000₫</div>
+            </div>
+          </div>
+          <!-- Product 5 -->
+          <div class="top-sales-item">
+            <div class="product-image">
+              <img src="images/top-sales5.jpg" alt="Top Sales Product 5">
+              <div class="product-price">2.080.000₫</div>
+            </div>
+          </div>
+          <!-- Product 6 -->
+          <div class="top-sales-item">
+            <div class="product-image">
+              <img src="images/top-sales6.jpg" alt="Top Sales Product 6">
+              <div class="product-price">4.390.000₫</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="js/swiper.js"></script>
+</section>
+
+  <section class="super-deals">
+    <div class="super-deals-container">
+      <div class="container">
+        <!-- Super Deals Header -->
+        <div class="super-deals-header">
+          <h2>Super Deals</h2>
+          <a href="#" class="view-more">View more ></a>
+        </div>
+        <!-- Product Grid -->
+        <div class="product-grid">
+          <!-- Product 1 -->
+          <div class="product-item">
+            <div class="product-image">
+              <img src="images/uniqlo1.jpg" alt="Product 1">
+            </div>
+            <div class="product-info">
+              <h3>Product 1</h3>
+              <div class="price">
+                <span>349.000₫</span>
+                <button class="add-to-cart">
+                  <i class="fas fa-shopping-bag"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Product 2 -->
+          <div class="product-item">
+            <div class="product-image">
+              <img src="images/uniqlo2.jpg" alt="Product 2">
+            </div>
+            <div class="product-info">
+              <h3>Product 2</h3>
+              <div class="price">
+                <span>750.000₫</span>
+                <button class="add-to-cart">
+                  <i class="fas fa-shopping-bag"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Product 3 -->
+          <div class="product-item">
+            <div class="product-image">
+              <img src="images/uniqlo3.jpg" alt="Product 3">
+            </div>
+            <div class="product-info">
+              <h3>Product 3</h3>
+              <div class="price">
+                <span>1.580.000₫</span>
+                <button class="add-to-cart">
+                  <i class="fas fa-shopping-bag"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Product 4 -->
+          <div class="product-item">
+            <div class="product-image">
+              <img src="images/uniqlo4.jpg" alt="Product 4">
+            </div>
+            <div class="product-info">
+              <h3>Product 4</h3>
+              <div class="price">
+                <span>630.000₫</span>
+                <button class="add-to-cart">
+                  <i class="fas fa-shopping-bag"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Product 5 -->
+          <div class="product-item">
+            <div class="product-image">
+              <img src="images/uniqlo5.jpg" alt="Product 5">
+            </div>
+            <div class="product-info">
+              <h3>Product 5</h3>
+              <div class="price">
+                <span>2.080.000₫</span>
+                <button class="add-to-cart">
+                  <i class="fas fa-shopping-bag"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Product 6 -->
+          <div class="product-item">
+            <div class="product-image">
+              <img src="images/uniqlo5.jpg" alt="Product 6">
+            </div>
+            <div class="product-info">
+              <h3>Product 6</h3>
+              <div class="price">
+                <span>4.390.000₫</span>
+                <button class="add-to-cart">
+                  <i class="fas fa-shopping-bag"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Help Center</a>
+        <a href="#">Shipping</a>
+        <a href="#">Returns</a>
+      </div>
+      <div class="social-media">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-pinterest"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
