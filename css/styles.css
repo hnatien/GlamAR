@@ -638,11 +638,14 @@ footer {
 
   .swiper-container {
     width: 100%;
+    max-width: 100%;
     overflow: hidden;
   }
 
   .swiper-slide {
-    width: 80% !important;
+    width: 100% !important;
+    max-width: 100%;
+    flex-shrink: 0;
     text-align: center;
   }
 
@@ -650,6 +653,12 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .swiper-slide img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
   }
 
   .swiper-pagination {
