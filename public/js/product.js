@@ -40,15 +40,25 @@ $(document).ready(function () {
     }
   });
 
-  $("#sort-by").on("change", function () {
-    const sortValue = $(this).val();
-    const $products = $(".product-card");
+  function sortProducts(sortValue) {
+    const $container = $("#products-container");
+    const $products = $(".product-card").detach(); // Tách sản phẩm khỏi DOM tạm thời
 
     $products.sort(function (a, b) {
       const aName = $(a).data("name").toLowerCase();
       const bName = $(b).data("name").toLowerCase();
-      const aPrice = parseFloat($(a).data("price"));
-      const bPrice = parseFloat($(b).data("price"));
+
+      // Xử lý giá tiền - loại bỏ dấu phẩy và ký tự không phải số
+      const aPrice = parseFloat(
+        $(a)
+          .data("price")
+          .replace(/[^0-9.]/g, "")
+      );
+      const bPrice = parseFloat(
+        $(b)
+          .data("price")
+          .replace(/[^0-9.]/g, "")
+      );
 
       switch (sortValue) {
         case "name-asc":
@@ -60,12 +70,26 @@ $(document).ready(function () {
         case "price-desc":
           return bPrice - aPrice;
         default:
-          return 0;
+          return $(a).data("original-index") - $(b).data("original-index");
       }
     });
 
-    $("#products-container").html($products);
+    // Thêm lại sản phẩm đã sắp xếp
+    $container.append($products);
+  }
+
+  // Lưu chỉ số ban đầu của sản phẩm
+  $(".product-card").each(function (index) {
+    $(this).data("original-index", index);
   });
+
+  // Xử lý sự kiện change
+  $("#sort-by").on("change", function () {
+    sortProducts($(this).val());
+  });
+
+  // Sắp xếp mặc định khi trang load
+  sortProducts($("#sort-by").val());
 
   // Cập nhật giỏ hàng khi trang được tải
   updateCartCount();
@@ -98,7 +122,7 @@ function startCartPolling() {
     } catch (error) {
       console.error("Lỗi khi cập nhật giỏ hàng:", error);
     }
-  }, 2000); 
+  }, 2000);
 }
 
 if (new URLSearchParams(window.location.search).has("forceRefresh")) {

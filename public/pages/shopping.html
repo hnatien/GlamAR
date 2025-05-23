@@ -373,9 +373,7 @@
         <label for="select-all">Select all items</label>
       </div>
 
-      <div class="cart-items" id="cart-items-container">
-        <!-- Cart items will be dynamically inserted here -->
-      </div>
+      <div class="cart-items" id="cart-items-container"></div>
 
       <div class="cart-summary">
         <h2 class="summary-title">Order Summary</h2>
@@ -462,7 +460,7 @@
 
         // Format price with currency
         function formatPrice(price) {
-          return "$" + (price / 100).toFixed(2);
+          return "$" + (price).toFixed(2);
         }
 
         // Update order summary
